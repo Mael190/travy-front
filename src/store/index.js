@@ -1,14 +1,14 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
+import { auth } from "./AuthModule";
+import { data } from "./DataModule";
+import { dataSocket} from "./SocketModule";
 
-export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+const store = createStore({
   modules: {
-  }
-})
+    auth,
+    data,
+    dataSocket
+  },
+});
+
+export default store;
